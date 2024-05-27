@@ -77,7 +77,8 @@ Se pide crear la pantalla que muestra el listado de adopciones:
 
 **Diseño**
 
-![](assets/listado_adopciones.jpeg)
+![image](https://github.com/alfsuace/examen-pmdm/assets/115726503/45fe301a-8bd9-458d-ba69-dc3aa9ca448d)
+
 
 ## Ejercicio 3: Detalle de Adopciones
 
@@ -100,7 +101,8 @@ Se pide crear la pantalla que muestra el detalle de adopciones.
 
 **Diseño**
 
-![](assets/detalle_adopcion.jpeg)
+![image](https://github.com/alfsuace/examen-pmdm/assets/115726503/ff430231-f46a-49c0-88e6-402b2bab9906)
+
 
 ## Ejercicio 4: Publicación de la app
 
