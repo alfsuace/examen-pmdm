@@ -6,8 +6,11 @@ import androidx.lifecycle.ViewModel
 import com.iesam.ex_22_23_pmdm_marzo.app.ErrorApp
 import com.iesam.ex_22_23_pmdm_marzo.feature.domain.AdoptionDetail
 import com.iesam.ex_22_23_pmdm_marzo.feature.domain.GetAdoptionUseCase
+import dagger.hilt.android.lifecycle.HiltViewModel
+import javax.inject.Inject
 
-class AdoptionDetailViewModel(private val getAdoptionUseCase: GetAdoptionUseCase) : ViewModel() {
+@HiltViewModel
+class AdoptionDetailViewModel @Inject constructor(private val getAdoptionUseCase: GetAdoptionUseCase) : ViewModel() {
 
 
     private var _uiState = MutableLiveData<UiState>()

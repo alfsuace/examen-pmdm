@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,16 +15,16 @@ import com.google.android.material.snackbar.Snackbar
 import com.iesam.ex_22_23_pmdm_marzo.feature.data.AdoptionsDataRepository
 import com.iesam.ex_22_23_pmdm_marzo.feature.domain.GetAdoptionsUseCase
 import com.iesam.ex_22_23_pmdm_marzo.feature.presentation.list.adapter.AdoptionItemAdapter
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AdoptionFragment : Fragment() {
 
     private var _binding: AdoptionFragmentBinding? = null
     private val binding get() = _binding!!
     private val adoptionItemAdapter = AdoptionItemAdapter()
 
-    private val viewModel: AdoptionViewModel by lazy {
-        AdoptionViewModel(GetAdoptionsUseCase(AdoptionsDataRepository()))
-    }
+    private val viewModel by viewModels<AdoptionViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -82,5 +83,10 @@ class AdoptionFragment : Fragment() {
 
     private fun showError() {
         Snackbar.make(binding.root, "Error", Snackbar.LENGTH_SHORT).show()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding=null
     }
 }

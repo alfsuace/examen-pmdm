@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.findNavController
@@ -16,17 +17,16 @@ import com.iesam.ex_22_23_pmdm_marzo.feature.data.AdoptionsDataRepository
 import com.iesam.ex_22_23_pmdm_marzo.feature.domain.AdoptionDetail
 import com.iesam.ex_22_23_pmdm_marzo.feature.domain.GetAdoptionUseCase
 import com.iesam.ex_22_23_pmdm_marzo.feature.presentation.list.AdoptionViewModel
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class AdoptionDetailFragment:Fragment() {
     private var _binding: AdoptionDetailFragmentBinding? = null
     private val binding get() = _binding!!
 
     val args: AdoptionDetailFragmentArgs by navArgs()
 
-    private val viewModel: AdoptionDetailViewModel by lazy {
-        AdoptionDetailViewModel(
-            GetAdoptionUseCase(AdoptionsDataRepository()))
-    }
+    private val viewModel by viewModels<AdoptionDetailViewModel>()
 
     override fun onCreateView(
         inflater: LayoutInflater,
