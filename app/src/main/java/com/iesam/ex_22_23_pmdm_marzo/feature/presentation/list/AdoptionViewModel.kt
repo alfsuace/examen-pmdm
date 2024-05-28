@@ -1,4 +1,4 @@
-package com.iesam.ex_22_23_pmdm_marzo.feature.presentation
+package com.iesam.ex_22_23_pmdm_marzo.feature.presentation.list
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData

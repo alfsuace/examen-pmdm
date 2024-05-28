@@ -1,4 +1,12 @@
 <resources>
     <string name="app_name">Ex_22_23_PMDM_marzo</string>
-    <string name="tool_bar_title">Ex_22_23_PMDM_marzo</string>
+    <string name="tool_bar_title">PMDM_marzo</string>
+
+    <string name="animal_detail_text">Detalles del Animal</string>
+    <string name="label_animal_sex">Sexo:</string>
+    <string name="label_animal_date_born">Fecha de Nacimiento:</string>
+    <string name="label_animal_breed">Raza:</string>
+    <string name="label_animal_size">Tamaño:</string>
+
+    <string name="error">error</string>
 </resources>

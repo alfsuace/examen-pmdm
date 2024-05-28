@@ -6,6 +6,8 @@
     <dimen name="spacing_vertical">12dp</dimen>
     <dimen name="spacing_horizontal">16dp</dimen>
 
+    <dimen name="text_spacing_horizontal">8dp</dimen>
+
     <dimen name="item_icon">30dp</dimen>
     <dimen name="item_image_height">150dp</dimen>
 </resources>

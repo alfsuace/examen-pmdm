@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/adoption_list">
+
+    <fragment
+        android:id="@+id/adoption_list"
+        android:name="com.iesam.ex_22_23_pmdm_marzo.feature.presentation.list.AdoptionFragment"
+        android:label="adoption_list"
+        tools:layout="@layout/adoption_fragment">
+
+        <action
+            android:id="@+id/action_list_to_detail"
+            app:destination="@id/adoption_detail" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/adoption_detail"
+        android:name="com.iesam.ex_22_23_pmdm_marzo.feature.presentation.detail.AdoptionDetailFragment"
+        android:label="adoption_detail"
+        tools:layout="@layout/adoption_detail_fragment">
+        <argument
+            android:name="adoptionId"
+            app:argType="integer"
+            app:nullable="false" />
+
+    </fragment>
+
+</navigation>
